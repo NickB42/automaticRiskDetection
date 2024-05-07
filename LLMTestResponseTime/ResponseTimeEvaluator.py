@@ -1,13 +1,9 @@
-import requests
-import time
-import os
-import json
-from tabulate import tabulate
+import requests, time, os, json
 from transformers import AutoTokenizer
 from transformers import GPT2TokenizerFast
 
 token = None
-URL = os.getenv("BTP_LLM_API_BASE")
+URL = os.getenv("LLM_API_BASE")
 
 model_cases = {
     "gpt": lambda q, model: {
@@ -50,11 +46,11 @@ model_cases = {
 def get_token():
     global token
     if token is None:
-        client_id = os.getenv("BTP_LLM_CLIENT_ID")
-        client_secret = os.getenv("BTP_LLM_CLIENT_SECRET")
+        client_id = os.getenv("LLM_CLIENT_ID")
+        client_secret = os.getenv("LLM_CLIENT_SECRET")
 
         params = {"grant_type": "client_credentials" }
-        resp = requests.post(f"{os.getenv('BTP_LLM_AUTH_URL')}/oauth/token",
+        resp = requests.post(f"{os.getenv('LLM_AUTH_URL')}/oauth/token",
                             auth=(client_id, client_secret),
                             params=params)
 
@@ -118,26 +114,19 @@ if __name__ == "__main__":
     
     llama2Tokenizer = AutoTokenizer.from_pretrained('meta-llama/Llama-2-70b-chat-hf')
     claude2Tokenizer = GPT2TokenizerFast.from_pretrained('Xenova/claude-tokenizer')
-    # auth: huggingface-cli login
+    # auth on cli: huggingface-cli login
 
     results = list()
 
-    #"gpt-4-32k","gpt-4-turbo", "gpt-35-turbo-16k", "gpt-4","cohere-command","alephalpha","ai21-j2-jumbo-instruct","gcp-chat-bison-001",
-    models= ["gpt-35-turbo-16k", "gpt-4","gpt-4-32k","gcp-chat-bison-001","anthropic-claude-v2-100k","cohere-command","llama2-70b-chat-hf","ai21-j2-jumbo-instruct"]
+    models= ["gpt-35-turbo-16k", "gpt-4","gpt-4-32k","gpt-4-turbo","gcp-chat-bison-001","anthropic-claude-v2-100k","cohere-command","llama2-70b-chat-hf","ai21-j2-jumbo-instruct","alephalpha"]
 
-    #models = ["gpt-35-turbo-16k", "gpt-4","gpt-4-32k","gcp-chat-bison-001","anthropic-claude-v2-100k","cohere-command","ai21-j2-jumbo-instruct"]
-    models = ["llama2-70b-chat-hf","ai21-j2-jumbo-instruct", "alephalpha"]
-
-    #questions = ["What is the capital of Australia?","What is the distance between the Earth and the Moon?","Who was the first woman to win a Nobel Prize?","What is the law of conservation of energy?","How does a combustion engine work?","What is the Pythagorean theorem?","What is a utility analysis?","What are the key principles of quantum mechanics?","What is the BLEU score in Machine Learning?","What is the F-1 score in Machine Learning?"]
-    questions = ["What is a utility analysis?"]
-
-
-    #for i in range(10):
-    for model in models:
-        run(model)
-
+    questions = ["What is the capital of Australia?","What is the distance between the Earth and the Moon?","Who was the first woman to win a Nobel Prize?","What is the law of conservation of energy?","How does a combustion engine work?","What is the Pythagorean theorem?","What is a utility analysis?","What are the key principles of quantum mechanics?","What is the BLEU score in Machine Learning?","What is the F-1 score in Machine Learning?"]
+    
+    for i in range(1,11):
+        print(f"Run {i} started!")
+        for model in models:
+            run(model)
+            
     res = [sublist + [round(sublist[2]/sublist[1],5)] for sublist in results]
 
-
     writeToFile(res)
-    print(tabulate(res, headers=["model","Tokens","Time", "time per token"], tablefmt="grid"))

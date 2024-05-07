@@ -1,0 +1,280 @@
+1. Risikoerkennung
+
+10 am häufigsten vorkommenden Risiken mit Beschreibung und Häufigkeit (bei 50 Durchgängen):
+
+Budget Overrun: (49/50)
+There could be a risk of exceeding the allocated budget for the project. The project involves software licensing,
+hardware upgrades, consultancy services, staff training, and post-deployment support that might end up requiring 
+more financial resources than initially planned, despite the contingency fund.
+
+Vendor Reliability: (38/50)
+There's a dependency on SAP and the SAP-certified consulting firm for successful implementation. In case these vendors do not deliver as expected 
+in terms of quality, timelines, or support, the project could face delays, poor implementation, and additional costs.
+
+Insufficient User Training: (38/50)
+This risk can occur if the users within the different departments of the company are not adequately trained to use the SAP S/4HANA system. 
+It can lead to a decrease in productivity, errors, and system under-utilization. It is especially significant as the successful migration 
+not only involves the correct setup and functioning of the system, but also the system adoption by its users.
+
+Data Loss During Migration: (35/50)
+During system migration, there is a risk of data loss, which can cripple the company's operations and decision-making capabilities. 
+This is due to potential compatibility issues, unanticipated software behavior and other unforeseen circumstances during migration. 
+Any loss of data could deprive the company of crucial information necessary for business operations and decision making.
+
+Project Timeline Delays: (34/50)
+There's a risk that the project might not be completed within the scheduled 11 months. This could be due to unforeseen technical issues,
+restructuring of business processes, or vendor-related problems. Any delay can lead to an increase in project costs and strain on resources 
+and might affect the expected benefits of transition.
+
+Technical Incompatibilities: (28/50)
+During the system preparation and customization phase, technical compatibility issues may arise between the new SAP S/4HANA system 
+and the existing IT infrastructure or other connected systems. These issues could disrupt the migration process, delay the project timeline 
+and even add unforeseen labor and costs to the project.
+
+Resistance To Change: (27/50)
+Employees may resist switching from the current system to the new SAP S/4HANA system. Resistance can occur due to a lack of understanding,
+fear of job loss, or increased workload. This could slow down the adoption of the new system and negatively impact operational efficiency.
+
+Data Security: (23/50)
+In the process of migration, if proper security measures are not implemented, the system could be susceptible to security breaches.
+Unauthorized access or attacks could lead to data leakages, violating privacy regulations and potentially leading to hefty financial 
+penalties and damage to the company's reputation.
+
+Post-Implementation Support: (22/50)
+Once the system is live, there may be technical glitches or user issues that need resolving. If the post-implementation support 
+fails to address these concerns promptly and effectively, it could disrupt business processes, decrease user satisfaction, and affect 
+overall adoption and productivity.
+
+Regulatory risks: (11/50)
+Operating in multiple countries, the company must ensure its IT systems, including the SAP S/4HANA, comply with the jurisdictional 
+regulations of each country. Non-compliance risks could lead to penalties, legal issues, and potential damage to reputation.
+It's crucial to assess the compliance requirements early in the project.
+
+
+
+
+------------------------------------------------------------------------------
+2. Risikobewertung
+Durchschnittliche Bewertung dieser Risiken (risk, risk impact, risk likeliness) auf einer Skala von 0 - 10.
+
+Budget Overrun: 8 , 6.3
+
+Vendor Reliability: 7.5, 5.1
+
+Insufficient User Training: 7.2 , 5.4
+
+Data Loss During Migration: 9.5 , 5.2
+
+Project Timeline Delays: 7.8 , 6.0
+
+Technical Incompatibilities: 7.5 , 5.5
+
+Resistance To Change: 6.2 , 5.8
+
+Data Security: 9.2 , 5.2
+
+Post-Implementation Support: 7.1 , 5.7 
+
+Regulatory risks: 8.0 , 5.2
+
+
+
+
+------------------------------------------------------------------------------
+3. Export von Risiken
+Hinzufügen zusätzlicher informationen (impact description, potential financial loss, response type, response description, potential mitigation cost)
+Für jedes Risiko wurden 2 Ergebnisse aufgelistet. Weitere befinden sich in der Datei resultsExport.txt.
+
+Format: Es wird zunächst risk impact und potential financial loss unter "impact" aufgelistet. 
+Danach response type, potential mitigation cost und response description unter "response".
+
+
+Budget Overrun:
+    1.
+    impact: 
+        If the budget is exceeded, the company may have to pull additional funds, compromising other projects or operations. 
+        Key project areas may be reduced in scope or quality to compensate for the overage. (potential cost: $500,000)
+
+    response: Mitigate, $25,000
+        Close monitoring of project costs and implementing cost-saving measures where possible. 
+        Also, regularly revisiting and adjusting the budget forecast based on current spending.
+
+    2.
+    impact:
+        Potential increase in the total expenditure and funding requirements for the project leading to erosion of 
+        anticipated benefits. (>15% of Project Budget)
+
+    response: Mitigate, "10% of Project Budget"
+        Implementing stringent financial tracking and control measures to keep the project within budget including fund 
+        allocation checks and regular budget reviews. Engaging certified consultants to minimize unnecessary expenditure.
+
+
+Vendor Reliability:
+    1.
+    impact:
+        Dependence on vendors may lead to delays, increased costs, or lower quality of implementation. If the project timeline extends, the 
+        organization may  face a loss in operational efficiency gains. (20% of total project budget, approx. $600,000)
+    
+    response: Transfer, $30,000
+        Establish stringent SLAs and penalties within contracts, and diversify vendor selection to reduce dependency on a single vendor. 
+    
+    2.
+    impact:
+        If the vendors fail to deliver as expected, the project could face issues in terms of quality, timelines, and cost. Poor vendor performance
+        could impact the project's success and lead to additional costs involved in finding and coordinating with alternative vendors.($200,000)
+
+    response: Transfer, $35,000
+        Consider Contractual agreements including penalty clauses for any deviation from agreed terms, to cover impacts of delay or inferior 
+        quality work. Importance of clear communication and relationship management with vendors can be stressed on.
+
+
+Insufficient User Training:
+    1.
+    impact:
+        Failure to adequately train users could lead to lower productivity, increased errors, and underutilization of system capabilities.
+        Lower system adoption rates could impact expected efficiency gains. (10% of project benefits, approx. $300,000)
+
+    response: Mitigate, $100,000
+        Develop comprehensive training programs tailored to different user groups. Implement buddy and mentor schemes for further learning.
+    
+    2.
+    impact:
+        Incomplete or inadequate user training may lead to a decrease in productivity, errors in task execution, and underutilization of 
+        the enhanced capabilities of the new system. ($150,000)
+
+    response: Mitigate, $75,000
+        Build a comprehensive training program for all users covering all functional aspects of the new system. Include a combination
+        of training methods: in-person, online, self-learning, workshops etc. for efficiency.
+
+Data Loss During Migration:
+    1.
+    impact:
+        Loss of data could severely impact day-to-day operations as well as decision-making capabilities. 
+        Loss of key information might lead to incorrect decisions being made. (30% of total project budget, approx. $900,000)
+    
+
+    response: Mitigate, $200,000
+        Maintain comprehensive backups of all data. Audit data transfers and ensure data integrity checks are in place during migration.
+    
+    2.
+    impact:
+        Losing data during migration can severely affect the company's operations and decision-making capabilities. It can also
+        cause an overall disruption of the business. ($400,000)
+
+    response: Avoid, $100,000
+        Ensure robust data migration plan including comprehensive backup strategy. Use of reliable data migration methodologies and 
+        tools can be considered. Involvement of experienced data migration experts to mitigate this risk.
+
+
+Project Timeline Delays:
+    1.
+    impact:
+        Project Timeline Delays,Delays can lead to increase costs, put strain on resources and negatively impact expected benefits of
+        transition. It may also push back the reinforcement of operational efficiency. (20% of total project budget, approx. $600,000)
+    
+
+    response: Mitigate, $150,000
+        Implement efficient project management practices. Identify factors causing delays and create a contingency plan.
+    
+    2.
+    impact:
+        Delay in project completion can escalate cost, strain resources, and potentially devalue the benefits of the 
+        transition. ($200,000)
+
+
+    response: Mitigate, $20,000
+        Create a realistic project timeline with clear milestones and buffer times. Close monitoring of project timeline and
+        constant communication among teams can help ensure timeline adherence.
+
+
+Technical Incompatibilities:
+    1.
+    impact:
+        Incompatibilities may halt or slow down the migration and accrue additional labor and costs. Troubleshooting and rectification
+        could result in a delayed project timeline. (25% of total project budget, approx. $750,000)
+    
+    response: Mitigate, $200,000
+        Perform thorough compatibility checks during the planning phase. Invest in necessary infrastructure changes.
+    
+    2.
+    impact:
+        Technical incompatibilities can disrupt the migration process, potentially causing project delays, cost overruns and reduced
+        system functionality. ($250,000)
+
+    response: Mitigate, $40,000
+        Conduct thorough technical review and compatibility testing. Also, establishing a technical support team to 
+        address issues promptly can be considered.
+
+Resistance To Change:
+    1.
+    impact:
+        Resistance can lead to decreased operational efficiency, slowed adoption, and lower return on investment.
+        (10% of project benefits, approx. $300,000)
+
+    response: Mitigate, $100,000
+        Initiate change management strategies. Communicate benefits of new system, provide comprehensive training, and manage employee expectations.
+    
+    2.
+    impact:
+        Resistance from employees may slow down system adoption and negatively impact operational efficiency post-implementation. 
+        ($100,000)
+
+    response: Mitigate, $50,000
+        Establishing a change management strategy that involves clear communication, managing expectations, involving users early 
+        in the process, and providing necessary training,
+
+Data Security:
+    1.
+    impact:
+        Data breaches can lead to violations of privacy regulations, financial penalties, and damage to reputation. 
+        This risk could undermine the integrity of the entire project. ($1,000,000 to unlimited)
+
+    response: Mitigate $250,000
+        Invest in robust security measures and conduct regular audits. Plan for relevant scenarios and have a response strategy in place.
+
+    2.
+    impact:
+        In case of a security breach, the company could potentially face financial penalties,
+        legal issues and damage to reputation. ($750,000)
+
+    response: Avoid, $150,000
+        Put a strong data security policy and system in place. Regular security audits, monitoring activities and strong 
+        encryption methods can mitigate this risk.
+
+
+Post-Implementation Support:            
+    1.
+    impact:
+        Inadequate support can lead to disrupted business processes, decreased user satisfaction, and lower productivity. The expected
+        benefits of the new system might not be realized within the estimated timeframe. (10% of project benefits, approx. $300,000)
+
+    response: Mitigate, $75,000
+        Ensure vendor provides adequate post-implementation support. Build internal expertise for troubleshooting.
+    
+    2.
+    impact:
+        Inadequate post-implementation support might disrupt business operations and affect overall system
+        performance and user satisfaction. ($150,000)
+
+    response: Mitigate, $80,000 
+        Setting up a dedicated support team to solve post-implementation issues. This would ensure that issues are addressed promptly and effectively.
+
+
+Regulatory risks:    
+    1.
+    impact:
+        Regulatory risks,Non-compliance with international regulations can lead to legal penalties,
+        financial loss and can harm the organization's reputation. ($500,000 to unlimited)
+
+    response: Mitigate, $150,000
+        Involve legal department early in the project planning. Include regulatory compliance checks 
+        and audits in the overall project pipeline.
+
+    2.
+    impact:
+        Non-compliance with jurisdictional regulations can lead to legal penalties, damaging the company's reputation, and straining
+        the company's relationship with regulatory bodies. ($500,000)
+
+    response: Avoid, $100,000
+        Expert Compliance teams or consultants can be engaged to identify and understand jurisdiction specific regulations 
+        and incorporate necessary measures in the system.
